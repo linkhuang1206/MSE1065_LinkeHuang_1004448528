@@ -9,8 +9,9 @@ The origin of the dataset is from the paper "Active learning across intermetalli
 https://doi.org/10.1038/s41929-018-0142-1
 More detailed information and associated codes are inluded in the GitHub page of the work, available at:  
 https://github.com/ulissigroup/GASpy_manuscript  
-The data contains the crystal structure info and the adsorption info of 23,141 adsorption sites from 1,499 intermetallic crystal for hydrogen evolution reaction(HER)
+The data contains the crystal structure info and the adsorption info of 22,675 adsorption sites from 995 intermetallic crystal for hydrogen evolution reaction(HER)
 
 ## Featurization
-The dataset are to be featurzied by crystal structure(lattice vectors, atomic position), adsorption site atom & associate neigbour list and the elements are to be featurized by atomic number,electronegativity and the # of the atoms of the element coordinated with the adsorbate. Depending on the availability of comupational resources, the feature might be further simplified.
-The goal of this project would be to develop a classfication model that can predict whether the material can have a near_optimal adsorption energy(-0.37eV to -0.17eV), and the result would be validated by comparing with the identified near-optimal surfaces. 
+The dataset are to be featurzied by 1. bulk compositional information based on the alloy module, 2. adsorption site atom & associate neigbour list and the elements(encoded by atomic number, electronegativity and the coordination number). 
+
+The goal of this project would be to develop a regression model that can predict the adsorption energy of the material(-0.37eV to -0.17eV) from the feature.
